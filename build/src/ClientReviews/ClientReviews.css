@@ -1,0 +1,143 @@
+.clientReviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+  
+.clientReviews-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+  
+.clientReviews-text-h3 {
+    font-family: Inter, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #112f4f;
+    margin-bottom: 0px;
+}
+  
+.clientReviews-text-p {
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    color: #596e7a;
+    text-align: center;
+    line-height: 1.5rem;
+}
+  
+.buttonsAndCards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden; 
+}
+
+.overflow-outline {
+    padding: 10rem 4rem 10rem 4rem;
+    background-color: white;
+    z-index: 1;
+}
+
+.overflow-outline > button{
+    background-color: #11b78d;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    font-family: Inter,sans-serif;
+    font-weight: bold;
+    font-size:2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color:white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.overflow-outline > button:hover{
+    background-color:#112f4f;
+    box-shadow: 0 0 15px #112f4f;
+}
+
+.overflow-outline > button:active{
+    box-shadow: 0 0 25px #11b78d;
+}
+  
+.clientReviews-cards {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    position: absolute;
+    left: 11%;
+    overflow: hidden;
+}
+  
+.clientReviews-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-width: 40rem;
+    min-height: 11rem;
+    border: 1px dashed #11b78d;
+    border-radius: 20px;
+    padding: 1rem;
+    font-family: Inter, sans-serif;
+    color:#596e7a;
+}
+
+.clientReviews-card-outline{
+    border: 1rem solid rgba(17,183,141,0.1);
+    border-radius: 40px;
+    height:fit-content;
+    margin-right: 10%;
+}
+  
+.clientReviews-card-info {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+  
+.clientReviews-card-info img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 25%;
+}
+  
+.clientReviews-card-info-name{
+    margin: 0;
+    width:90%;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #112f4f;
+}
+    
+    
+.clientReviews-card-info-job {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    color: #596e7a;
+}
+@media screen and (max-width: 1368px) {
+    .clientReviews-card {
+        min-width: 30rem;
+        min-height: 11rem;
+    }
+    .clientReviews-card-outline{
+        margin-left: 10%;
+        margin-right: 0;
+    }
+
+    .clientReviews-card-outline:first-child{
+        margin-left: 5%;
+    }
+}

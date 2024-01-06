@@ -1,0 +1,66 @@
+.help{
+    padding-top:10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    color:rgba(0, 185, 141, 1);
+}
+
+.faq-link{
+    text-decoration: underline;
+    color:#00b98d
+}
+
+.help-title{
+    width: 100%;
+    text-shadow:0 0 30px #00b98d;
+}
+
+.help-welcome{
+    color: #00b98d;
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    text-shadow:0 0 30px #00b98d;
+    cursor: pointer;
+    margin-bottom: 1%;
+}
+
+.help-infoPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0e2e50;
+    border-radius: 20px;
+    width: 35%;
+    min-height: 150px;
+    padding: 1%;
+    margin: 3%;
+    transition-duration: 0.3s;
+}
+
+.help-infoPart-subTitle{
+    transition-duration: 0.3s;
+}
+
+.help-infoPart-subText{
+    transition-duration: 0.3s;
+}
+
+.help-infoPart:hover{
+    box-shadow: 0 0 15px #0e2e50;
+}
+
+.help-infoPart:hover .help-infoPart-subTitle{
+    color:white;
+    text-shadow: 0 0 5px #00b98d;
+}
+
+.help-infoPart:hover .help-infoPart-subText{
+    color:white;
+    text-shadow: 0 0 5px #00b98d;
+}

@@ -1,0 +1,126 @@
+.hidden{
+    display: none;
+}
+
+.agentsListing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideFromBottom 1s ease-in-out;
+}
+
+.agentsListing-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.agentsListing-text-h3{
+    font-family: Inter,sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    color:#0e2e50;
+    margin:0px;
+}
+
+.agentsListing-text-p{
+    font-family: Inter,sans-serif;
+    font-size: 1rem;
+    color:#636664;
+    margin-bottom:2rem;
+    line-height: 1.8rem;
+}
+
+.agentsListing-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right:5%;
+}
+
+.agentListing-card{
+    display: flex;
+    flex-direction: column;
+    width:22.5%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.agentListing-card:active{
+    box-shadow: 0 0 25px #00b98d;
+}
+
+.agentListing-card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agentListing-card-info-name{
+    font-family: Inter,sans-serif;
+    font-size: 2rem;
+    margin-bottom:0px;
+    font-weight: bold;
+    color:#0a2f55;
+}
+
+.agentListing-card-info-designation{
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0px;
+    color:#918782;
+}
+
+.agentListing-icons{
+    position: relative;
+    left:7.5rem;
+    bottom:8rem;
+}
+
+.icon {
+    background-color: white;
+    transition-duration: 0.4s;
+    box-shadow: 0 0 8px black;
+    border-radius: 50px;
+    width: 1.7rem;
+    padding: 0.5rem;
+    margin-right:0.5rem;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: #00ba8d;
+}
+
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 1550px) {
+    .agentsListing-cards {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        gap: 10%;
+    }
+
+    .agentListing-card{
+        width: 100%;
+        padding-bottom: 15%;
+    }
+
+}
