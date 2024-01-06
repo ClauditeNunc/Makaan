@@ -1,0 +1,329 @@
+::placeholder{
+    color:#00b98d;
+}
+
+.propertyListingExtra-about{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Inter, sans-serif;
+    color:#0e2e50;
+}
+
+.propertyListingExtra-about-text{
+    text-align: center;
+    min-width: 100%;
+}
+
+.propertyListingExtra-about-text >h3{
+    font-size: 3rem;
+    margin:0;
+}
+
+.propertyListingExtra-about-text > p{
+    font-size: 1.4rem;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.propertyListingExtra-about-nav{
+    display: flex;
+    width: 45%;
+    margin-left: 5%;
+}
+
+.propertyListingExtra-about-nav-button{
+    padding:1em;
+    padding-left: 1.3em;
+    padding-right:1.3em;
+    margin-right:1em;
+    background-color: white;
+    border:1px solid #00b98d;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Inter, sans-serif;
+    font-size: 1em;
+    transition-duration: 0.5s;
+    box-shadow: 0 0 0 #00b98d;
+}
+
+.active{
+    box-shadow: 0 0 15px #00b98d;
+    background-color: #00b98d;
+    color:white;
+}
+
+.propertyListingExtra-search{
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    margin-right: 5%;
+}
+
+.propertyListingExtra-search > input{
+    outline: none;
+    font-family: Inter, sans-serif;
+    font-size: 1.2rem;
+    color: #00b98d;
+    border: 1px solid #00b98d;
+    border-right: none;
+}
+
+.propertyListingExtra-search > select{
+    outline: none;
+    font-size: 1.1rem;
+    color: #00b98d;
+    font-family: Inter, sans-serif;
+    border: 1px solid #00b98d;
+    border-right: none;
+    cursor: pointer;
+}
+
+.propertyListingExtra-search > select > option{
+    color:#00b98d;
+    cursor: pointer;
+}
+
+.propertyListingExtra-search > button{
+    font-family: Inter, sans-serif;
+    font-size: 1.5rem;
+    background-color: #00b98d;
+    color: white;
+    border: 1px solid #00b98d;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.propertyListingExtra-search > button:hover{
+    background-color: #0e2e50;
+    color: #00b98d;
+    box-shadow:0 0 20px #0e2e50;
+    border-color: #0e2e50;
+}
+
+.propertyListingExtra-search > button:active{
+    box-shadow: 0 0 50px #00b98d ;
+}
+
+.propertyListingExtra-posts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: Inter, sans-serif;
+}
+
+.propertyListingExtra-post{
+    display: flex;
+    overflow: hidden;
+    min-height: 400px;
+    min-width: 28%;
+    border-radius: 20px;
+    margin: 2%;
+    cursor: pointer;
+}
+
+.propertyListingExtra-post-photo-container {
+    position: relative;
+    width: 100%;
+}
+
+.propertyListingExtra-post-photo {
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition-duration: 0.3s;
+}
+
+.propertyListingExtra-post-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.90);
+    min-width: 30%;
+    position: relative;
+    z-index: 1;
+    padding-top: 6%;
+    padding-bottom: 7%;
+    width: 100%;
+    box-sizing: border-box; 
+    transition-duration: 0.4s;
+}
+
+.propertyListingExtra-post-shortInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-duration: 0.3s;
+}
+
+.propertyListingExtra-post-shortInfo-status{
+    background-color: rgb(17, 183, 141);
+    color:white;
+    padding: 0.5rem;
+    text-align: center;
+    transition-duration: 0.3s;
+    border-bottom-right-radius: 20px;
+}
+
+.propertyListingExtra-post-shortInfo-type{
+    background-color: #0e2e50;
+    color:rgb(17, 183, 141);
+    padding: 0.5rem;
+    text-align: center;
+    border-top-right-radius: 20px;
+}
+
+.propertyListingExtra-post-info-price{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color:rgb(17, 183, 141);
+    height: 20%;
+    transition-duration: 0.4s;
+    padding-left: 10px;
+}
+
+.propertyListingExtra-post-info-title{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:rgb(17, 183, 141);
+    height: 20%;
+    transition-duration: 0.4s;
+    padding-left: 10px;
+}
+
+.propertyListingExtra-post-info-location{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color:rgb(17, 183, 141);
+    height: 20%;
+    transition-duration: 0.4s;
+    padding-left: 10px;
+}
+
+.post-info-gpsIcon{
+    max-width: 2rem;
+}
+
+.propertyListingExtra-post-footer{
+    display:none;
+    width: 100%;
+}
+
+.propertyListingExtra-post-footerPart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-left: none;
+    border-bottom: none;
+    width: 33%;
+    color:white;
+}
+
+.propertyListingExtra-post-footerPart:last-child{
+    border-right: none;
+}
+
+.propertyListingExtra-post-footerPart > img{
+    max-width:2rem;
+    padding-right: 10%;
+}
+
+
+/*HOVER MAGIC */
+
+.propertyListingExtra-post:hover .propertyListingExtra-post-shortInfo{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+}
+
+.propertyListingExtra-post:hover .propertyListingExtra-post-shortInfo-status{
+    background-color: #0e2e50;
+    color: rgb(17, 183, 141);
+}
+
+.propertyListingExtra-post:hover .propertyListingExtra-post-shortInfo-type{
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+}
+
+.propertyListingExtra-post:hover .propertyListingExtra-post-photo-container{
+    overflow: visible;
+}
+
+.propertyListingExtra-post:hover .propertyListingExtra-post-info {
+    min-width: 80%;
+    background-color: rgba(17, 183, 141, 0.9);
+    padding: 0%;
+}
+
+.propertyListingExtra-post:hover .propertyListingExtra-post-info-price{
+    color:white;
+    padding-left: 5px;
+}
+
+.propertyListingExtra-post:hover .propertyListingExtra-post-info-title{
+    color:white;
+    padding-left: 5px;
+}
+
+.propertyListingExtra-post:hover .propertyListingExtra-post-info-location{
+    color:white;
+    padding-left: 5px;
+    font-size: 1.3rem;
+}
+
+.propertyListingExtra-post:hover .propertyListingExtra-post-footer{
+    display: flex;
+}
+
+@media screen and (max-width: 1600px){
+    .propertyListingExtra-post{
+        display: flex;
+        overflow: hidden;
+        min-height: 400px;
+        min-width: 40%;
+        border-radius: 20px;
+        margin: 2%;
+        cursor: pointer;
+    }
+
+    .propertyListingExtra-post-info-price{
+        font-size: 1.6rem;
+    }
+
+    .propertyListingExtra-post-info-title{
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 1600px){
+    .propertyListingExtra-about{
+        justify-content: center;
+    }
+    .propertyListingExtra-about-nav{
+        width: 50%;
+    }
+    .propertyListingExtra-search{
+        width: 50%;
+        margin-left:10%;
+        margin-top: 3%;
+    }
+}

@@ -1,0 +1,126 @@
+.hidden{
+    display: none;
+    transition-duration: 5s;
+}
+
+
+.propertyPromo{
+    display:flex;
+    position: relative;
+    background-color: white;
+    z-index: 5;
+}
+
+.propertyPromo-img-container{
+    height:800px;
+    width:50%;
+    animation:slideInRight 1.5s ease-out;
+}
+
+.propertyPromo-img{
+    z-index:1;
+    position: relative;
+    width: 45;
+    height: 45rem;
+    bottom:48em;
+    left:5em;
+}
+
+.propertyPromo-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5em;
+    margin-bottom:2em;
+    margin-left: 10%;
+    border-radius:15px;
+    animation:slideInLeft 1.5s ease-in;
+}
+
+.propertyPromo-text-title{
+    font-family: Inter, sans-serif;
+    font-size:3em;
+    margin-bottom: 0.3em;
+}
+
+.propertyPromo-text-p{
+    font-family:Inter, sans-serif;
+    font-size:1.2em;
+    color:#666565;
+}
+
+.propertyPromo-text-container > ul{
+    font-family: Inter, sans-serif;
+    color:#666565;
+    font-size:1.2em;
+    padding: 0px;
+}
+
+.propertyPromo-text-container > ul> li{
+    list-style: none;
+    padding-bottom:1em;
+}
+
+.propertyPromo-text-container > ul > li > span{
+    color:#24b48d;
+    font-size: 1.3em;
+    padding-right:1em;
+}
+
+.readMore-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 3em;
+    border: 2px #00b98d solid;
+    border-radius: 10px;
+    background-color: #00b98d;
+    font-family: Inter, sans-serif;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.readMore-button:hover{
+    background-color: #33c7a5;
+    box-shadow: 0 0 15px #00b98d;
+}
+
+
+@keyframes slideInLeft {
+    from {  
+        opacity: 0;
+        transform: translateX(+100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slideInRight{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1368px) {
+    .propertyPromo{
+        flex-direction: column-reverse;
+    }
+
+    .propertyPromo-text-container{
+        margin-top: 0px;
+        margin-left: 5%;
+    }
+  }

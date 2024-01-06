@@ -1,0 +1,144 @@
+.hidden {
+    display: none;
+}
+
+.agentPromo-outline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #effdf4;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.agentPromo {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1.5em;
+    border: dashed #c0eadd 1px;
+    border-radius: 10px;
+}
+
+.agentPromo-portrait {
+    width: 40%;
+    animation: slideInRight 1s ease-in-out;
+}
+
+.agentPromo-text {
+    width: 55%;
+    margin-top: 5%;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.agentPromo-text-title {
+    font-family: Inter, sans-serif;
+    font-size: 5em;
+    margin: 0px;
+    color: #0e2e50;
+}
+
+.agentPromo-text-subText {
+    font-family: Inter, sans-serif;
+    color: #6a6a72;
+    font-size: 1.3em;
+    line-height: 1.7rem;
+}
+
+.agentPromo-buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.agentPromo-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-family: Inter, sans-serif;
+    font-size: 1.2em;
+    padding: 0.7em;
+    background-color: #00b98d;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.agentPromo-button:hover {
+    background-color: #0e2e50;
+    color: #00b98d;
+    box-shadow: 0 0 15px #0e2e50;
+}
+
+.agentPromo-button:active {
+    box-shadow: 0 0 50px #00b98d;
+}
+
+.agentPromo-button-image {
+    width: 1.5rem;
+    padding-right: 0.5em;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(+100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1368px) {
+
+    
+    .agentPromo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agentPromo-portrait,
+    .agentPromo-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .agentPromo-portrait {
+        margin-bottom: 1em;
+    }
+
+    .agentPromo-text-title {
+        font-size: 3em;
+    }
+
+    .agentPromo-text-subText {
+        font-size: 1em;
+        line-height: 1.5rem;
+    }
+
+    .agentPromo-buttons {
+        justify-content: center;
+        margin-top: 1em;
+    }
+
+    .agentPromo-button {
+        margin: 0.5em;
+        font-size: 1em;
+    }
+}
