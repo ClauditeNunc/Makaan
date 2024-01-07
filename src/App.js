@@ -47,7 +47,7 @@ const updatePropertyDatabase = (newProperty) => {
             </>
           }
         />
-        <Route path="/search" element={<SearchBar  />} />
+        <Route path="Makaan/search" element={<SearchBar  />} />
         <Route path="/property-types" element={<PropertyTypesBlock animationStatus={true} />} />
         <Route path="/property-promo" element={<PropertyPromo animationStatus={true} />} />
         <Route path="/property-listing" element={<PropertyListing propertyDatabase={propertyDatabase} />} />
