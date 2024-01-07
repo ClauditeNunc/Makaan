@@ -95,7 +95,7 @@ function Footer() {
         </div>
         <div className='footer-bottomPart'>
             <div className='footer-bottomPart-signature'>
-                © <a>Your site name</a>, All rights reserved. Design realised by <a onClick={()=>window.open("https://www.linkedin.com/in/kbln27/?originalSubdomain=pl","_blank")}>Faik Mammadov</a>, designed by <a onClick={()=>window.open("https://htmlcodex.com/","_blank")}>HTML Codex</a>.
+                © <a>Makaan</a>, All rights reserved. Design realised by <a onClick={()=>window.open("https://www.linkedin.com/in/kbln27/?originalSubdomain=pl","_blank")}>Faik Mammadov</a>, designed by <a onClick={()=>window.open("https://htmlcodex.com/","_blank")}>HTML Codex</a>.
             </div>
             <div className='footer-bottomPart-additionalLinks'>
                 <Link to="/" className='footer-bottomPart-additionalLink' onClick={handleLinkClick}>
