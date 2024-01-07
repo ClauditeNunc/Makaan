@@ -53,7 +53,7 @@ function Testimonial() {
       <li>Once climbed Mount Everest, digitally, in an online game.</li>
       <li>Certified "Chair Racing Champion" – unbeaten in office hallway competitions.</li>
       <li>Skilled in the delicate art of "Desk Jenga" – stacking books with unmatched finesse.</li>
-      <li>Can fix a computer glitch with a well-timed "Ctrl + Alt + Del" chant.</li>
+      <li>Possesses an extraordinary knack for making the office coffee machine feel appreciated.</li>
     </ol>
   );
 }
