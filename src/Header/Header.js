@@ -1,73 +1,96 @@
-// Import necessary components and React
-import { React, useState } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import FrontPage from './FrontPage/FrontPage';
-import Header from './Header/Header';
-import SearchBar from './SearchBar/SearchBar';
-import PropertyTypesBlock from './PropertyTypesBlock/PropertyTypesBlock';
-import PropertyPromo from './PropertyPromo/PropertyPromo';
-import PropertyListing from './PropertyListing/PropertyListing';
-import AgentPromo from './AgentPromo/AgentPromo';
-import AgentsListing from './AgentsListing/AgentsListing';
-import ClientReviews from './ClientReviews/ClientReviews';
-import Footer from './Footer/Footer';
-import Testimonial from './Testimonial/Testimonial';
-import Error404 from './Error404/Error404';
-import AddProperty from './AddProperty/AddProperty';
-import { propertyLocations, propertyTypes, databaseOfPseudoProperties as initialDB, databaseOfPseudoProperties } from './locations';
-import Cookies from './Cookies/Cookies';
-import Help from './Help/Help';
-import Faq from './Faq/Faq';
-import PropertyListingExtra from './PropertyListingExtra/PropertyListingExtra';
+import './Header.css';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
-function App() {
-  const [propertyDatabase, setPropertyDatabase] = useState(initialDB);
-
-  const updatePropertyDatabase = (newProperty) => {
-    setPropertyDatabase((prevDatabase) => [...prevDatabase, newProperty]);
-    databaseOfPseudoProperties.push(newProperty); // Add the new property to the original array
-  };
-
-  return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <FrontPage />
-              <SearchBar />
-              <PropertyTypesBlock animationStatus={false} />
-              <PropertyPromo animationStatus={false} />
-              <PropertyListing propertyDatabase={propertyDatabase} />
-              <AgentPromo animationStatus={false} />
-              <AgentsListing animationStatus={false} />
-              <ClientReviews />
-            </>
-          }
-        />
-        <Route path="/search" element={<SearchBar />} />
-        <Route path="/property-types" element={<PropertyTypesBlock animationStatus={true} />} />
-        <Route path="/property-promo" element={<PropertyPromo animationStatus={true} />} />
-        <Route path="/property-listing" element={<PropertyListing propertyDatabase={propertyDatabase} />} />
-        <Route path="/client-reviews" element={<ClientReviews />} />
-        <Route path="/agent-promo" element={<AgentPromo animationStatus={true} />} />
-        <Route path="/agents-listing" element={<AgentsListing animationStatus={true} />} />
-        <Route path="/testimonial" element={<Testimonial />} />
-        <Route path="/add-property" element={<AddProperty updateDatabase={updatePropertyDatabase} />} />
-        <Route path="/cookies" element={<Cookies />} />
-        <Route path="/help" element={<Help />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/property-listing-extra" element={<PropertyListingExtra />} />
-        <Route
-          path="/*"
-          element={<Error404 />}
-        />
-      </Routes>
-      <Footer />
-    </Router>
-  );
+function BurgerIcon({ onClick }) {
+    return (
+        <div className="burger-icon" onClick={onClick}>
+            <img src='./imgs/burgerMenu.png' alt="Burger Icon" />
+        </div>
+    );
 }
 
-export default App;
+function Header() {
+    const [isHoveredProperties, setIsHoveredProperties] = useState(false);
+    const [isHoveredPages, setIsHoveredPages] = useState(false);
+    const [isMorphed, setIsMorphed] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScrollForMorphed = () => {
+            if (window.scrollY >= 50) {
+                setIsMorphed(true);
+            } else {
+                setIsMorphed(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScrollForMorphed);
+        return () => {
+            window.removeEventListener('scroll', handleScrollForMorphed);
+        };
+    }, []);
+
+    const handleMouseEnterPages = () => setIsHoveredPages(true);
+    const handleMouseLeavePages = () => setIsHoveredPages(false);
+    const handleMouseClickPages = () => setIsHoveredPages(!isHoveredPages);
+
+    const handleMouseEnterProperties = () => setIsHoveredProperties(true);
+    const handleMouseLeaveProperties = () => setIsHoveredProperties(false);
+    const handleMouseClickProperties = () => setIsHoveredProperties(!isHoveredProperties);
+
+    const handleBurgerClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+    const handleLinkClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    return (
+        <div className={isMorphed ? 'header-sticky' : 'header'}>
+            <div className='header-shortInfo'>
+                <img src='./imgs/icon-deal.png' alt="Icon" />
+                <h2>Makaan</h2>
+            </div>
+            <BurgerIcon className="burger-menu" onClick={handleBurgerClick} />
+            <div className={`header-links${isMobileMenuOpen ? ' show' : ''}`}>
+                <Link to="/" className='header-links-home' onClick={handleLinkClick}>
+                    Home
+                </Link>
+                <Link to="/property-promo" className='header-links-about' onClick={handleLinkClick}>
+                    About
+                </Link>
+                <div onClick={handleMouseClickProperties} className='header-links-dropdownProperties'>
+                    Property ˅
+                    <div
+                        onMouseEnter={handleMouseEnterProperties}
+                        onMouseLeave={handleMouseLeaveProperties}
+                        className={`header-linksDropdownProperty ${isHoveredProperties ? 'visible' : ''}`}>
+                        <Link to="/property-listing">Our Properties</Link>
+                        <Link to="/property-types" onClick={handleLinkClick}>Types of Properties</Link>
+                        <Link to="/agents-listing" onClick={handleLinkClick}>Our Agents</Link>
+                    </div>
+                </div>
+                <div onClick={handleMouseClickPages} className='header-links-dropdownPages'>
+                    Pages ˅
+                    <div
+                        onMouseEnter={handleMouseEnterPages}
+                        onMouseLeave={handleMouseLeavePages}
+                        className={`header-linksDropdownPage ${isHoveredPages ? 'visible' : ''}`}>
+                        <Link to="/testimonial">Testimonial</Link>
+                        <Link to="/error-404">Error 404</Link>
+                        <Link to="/property-listing-extra">Browse More</Link>
+                        <Link to="/faq">FAQs</Link>
+                        <Link to="/help">Help</Link>
+                    </div>
+                </div>
+                <Link to="/agent-promo" className='header-links-contact'>
+                    Contact
+                </Link>
+                    <Link to="/add-property" className='header-links-addProperty-button'> 
+                    Add Property
+                    </Link>
+            </div>
+        </div>
+    );
+}
+
+export default Header;

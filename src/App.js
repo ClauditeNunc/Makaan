@@ -1,6 +1,6 @@
 // Import necessary components and React
 import { React, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import FrontPage from './FrontPage/FrontPage';
 import Header from './Header/Header';
 import SearchBar from './SearchBar/SearchBar';
@@ -29,7 +29,7 @@ function App() {
   };
 
   return (
-    <Router basename='/Makaan'>
+    <Router>
       <Header />
       <Routes>
         <Route
