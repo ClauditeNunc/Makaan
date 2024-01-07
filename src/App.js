@@ -29,11 +29,11 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename='/Makaan'>
       <Header />
       <Routes>
         <Route
-          path="/Makaan"
+          path="/"
           element={
             <>
               <FrontPage />
