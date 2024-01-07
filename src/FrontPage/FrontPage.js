@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function FrontPage() {
-    const images = ['/imgs/about.jpg', '/imgs/carousel-1.jpg', '/imgs/carousel-2.jpg','/imgs/about.jpg', '/imgs/carousel-1.jpg', '/imgs/carousel-2.jpg','/imgs/about.jpg', '/imgs/carousel-1.jpg', '/imgs/carousel-2.jpg','/imgs/about.jpg', '/imgs/carousel-1.jpg', '/imgs/carousel-2.jpg','/imgs/about.jpg', '/imgs/carousel-1.jpg', '/imgs/carousel-2.jpg'];
+    const images = ['./imgs/about.jpg', './imgs/carousel-1.jpg', './imgs/carousel-2.jpg','./imgs/about.jpg', './imgs/carousel-1.jpg', './imgs/carousel-2.jpg','./imgs/about.jpg', './imgs/carousel-1.jpg', './imgs/carousel-2.jpg','./imgs/about.jpg', './imgs/carousel-1.jpg', './imgs/carousel-2.jpg','./imgs/about.jpg', './imgs/carousel-1.jpg', './imgs/carousel-2.jpg'];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const handlePrevClick = () => {
