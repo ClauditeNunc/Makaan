@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Makaan/static/css/main.1e15b269.css",
+    "main.css": "/Makaan/static/css/main.f6b5964e.css",
     "main.js": "/Makaan/static/js/main.ac1c31aa.js",
     "index.html": "/Makaan/index.html",
-    "main.1e15b269.css.map": "/Makaan/static/css/main.1e15b269.css.map",
+    "main.f6b5964e.css.map": "/Makaan/static/css/main.f6b5964e.css.map",
     "main.ac1c31aa.js.map": "/Makaan/static/js/main.ac1c31aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e15b269.css",
+    "static/css/main.f6b5964e.css",
     "static/js/main.ac1c31aa.js"
   ]
 }
