@@ -252,7 +252,7 @@
     }
 
     .propertyListing-post{
-        max-width: 65%;
+        min-width: 65%;
         height: 600px;
         margin-left: 20%;
         margin-right: 20%;
