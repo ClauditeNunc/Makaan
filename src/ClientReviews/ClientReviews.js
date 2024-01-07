@@ -17,7 +17,6 @@ function ClientReviews() {
         transform: `translateX(${-currentImageIndex * 35}%)`,
         transition: 'transform 1s ease-in-out',
         overflow: 'hidden',
-        minWidth:"1000px"
     };
 
     return (
