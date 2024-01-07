@@ -33,7 +33,7 @@ const updatePropertyDatabase = (newProperty) => {
       <Header />
       <Routes>
         <Route
-          path="/Makaan/"
+          path="https://clauditenunc.github.io/Makaan/"
           element={
             <>
               <FrontPage />
@@ -47,21 +47,21 @@ const updatePropertyDatabase = (newProperty) => {
             </>
           }
         />
-        <Route path="/Makaan/search" element={<SearchBar  />} />
-        <Route path="/Makaan/property-types" element={<PropertyTypesBlock animationStatus={true} />} />
-        <Route path="/Makaan/property-promo" element={<PropertyPromo animationStatus={true} />} />
-        <Route path="/Makaan/property-listing" element={<PropertyListing propertyDatabase={propertyDatabase} />} />
-        <Route path="/Makaan/client-reviews" element={<ClientReviews />} />
-        <Route path="/Makaan/agent-promo" element={<AgentPromo animationStatus={true}/>} />
-        <Route path="/Makaan/agents-listing" element={<AgentsListing animationStatus={true}/>} />
-        <Route path="/Makaan/testimonial" element={<Testimonial />} />
-        <Route path="/Makaan/add-property" element={<AddProperty updateDatabase={updatePropertyDatabase} />} />
-        <Route path="/Makaan/cookies" element={<Cookies />}/>
-        <Route path="/Makaan/help" element={<Help/>}/>
-        <Route path="/Makaan/faq" element={<Faq/>}/>
-        <Route path="/Makaan/property-listing-extra" element={<PropertyListingExtra/>}/>
+        <Route path="https://clauditenunc.github.io/Makaan/search" element={<SearchBar  />} />
+        <Route path="https://clauditenunc.github.io/Makaan/property-types" element={<PropertyTypesBlock animationStatus={true} />} />
+        <Route path="https://clauditenunc.github.io/Makaan/property-promo" element={<PropertyPromo animationStatus={true} />} />
+        <Route path="https://clauditenunc.github.io/Makaan/property-listing" element={<PropertyListing propertyDatabase={propertyDatabase} />} />
+        <Route path="https://clauditenunc.github.io/Makaan/client-reviews" element={<ClientReviews />} />
+        <Route path="https://clauditenunc.github.io/Makaan/agent-promo" element={<AgentPromo animationStatus={true}/>} />
+        <Route path="https://clauditenunc.github.io/Makaan/agents-listing" element={<AgentsListing animationStatus={true}/>} />
+        <Route path="https://clauditenunc.github.io/Makaan/testimonial" element={<Testimonial />} />
+        <Route path="https://clauditenunc.github.io/Makaan/add-property" element={<AddProperty updateDatabase={updatePropertyDatabase} />} />
+        <Route path="https://clauditenunc.github.io/Makaan/cookies" element={<Cookies />}/>
+        <Route path="https://clauditenunc.github.io/Makaan/help" element={<Help/>}/>
+        <Route path="https://clauditenunc.github.io/Makaan/faq" element={<Faq/>}/>
+        <Route path="https://clauditenunc.github.io/Makaan/property-listing-extra" element={<PropertyListingExtra/>}/>
         <Route
-          path="/Makaan/*"
+          path="https://clauditenunc.github.io/Makaan/*"
           element={<Error404 />}
         />
       </Routes>
