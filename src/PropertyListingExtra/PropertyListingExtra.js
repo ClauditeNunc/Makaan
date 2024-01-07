@@ -75,7 +75,7 @@ function PropertyListingExtra() {
                         onClick={() => handleWhichIsClicked('For Sale')}
                         id="For Sale"
                     >
-                        For Sell
+                        For Sale
                     </button>
                     <button
                         className='propertyListingExtra-about-nav-button'

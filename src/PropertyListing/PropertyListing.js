@@ -76,7 +76,7 @@ function PropertyListing() {
                         onClick={() => handleWhichIsClicked('For Sale')}
                         id="For Sale"
                     >
-                        For Sell
+                        For Sale
                     </button>
                     <button
                         className='propertyListing-about-nav-button'
