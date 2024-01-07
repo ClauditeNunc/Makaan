@@ -33,7 +33,7 @@ const updatePropertyDatabase = (newProperty) => {
       <Header />
       <Routes>
         <Route
-          path="/Makaan/"
+          path="/"
           element={
             <>
               <FrontPage />
@@ -47,21 +47,21 @@ const updatePropertyDatabase = (newProperty) => {
             </>
           }
         />
-        <Route path="/Makaan/search" element={<SearchBar  />} />
-        <Route path="/Makaan/property-types" element={<PropertyTypesBlock animationStatus={true} />} />
-        <Route path="/Makaan/property-promo" element={<PropertyPromo animationStatus={true} />} />
-        <Route path="/Makaan/property-listing" element={<PropertyListing propertyDatabase={propertyDatabase} />} />
-        <Route path="/Makaan/client-reviews" element={<ClientReviews />} />
-        <Route path="/Makaan/agent-promo" element={<AgentPromo animationStatus={true}/>} />
-        <Route path="/Makaan/agents-listing" element={<AgentsListing animationStatus={true}/>} />
-        <Route path="/Makaan/testimonial" element={<Testimonial />} />
-        <Route path="/Makaan/add-property" element={<AddProperty updateDatabase={updatePropertyDatabase} />} />
-        <Route path="/Makaan/cookies" element={<Cookies />}/>
-        <Route path="/Makaan/help" element={<Help/>}/>
-        <Route path="/Makaan/faq" element={<Faq/>}/>
-        <Route path="/Makaan/property-listing-extra" element={<PropertyListingExtra/>}/>
+        <Route path="/search" element={<SearchBar  />} />
+        <Route path="/property-types" element={<PropertyTypesBlock animationStatus={true} />} />
+        <Route path="/property-promo" element={<PropertyPromo animationStatus={true} />} />
+        <Route path="/property-listing" element={<PropertyListing propertyDatabase={propertyDatabase} />} />
+        <Route path="/client-reviews" element={<ClientReviews />} />
+        <Route path="/agent-promo" element={<AgentPromo animationStatus={true}/>} />
+        <Route path="/agents-listing" element={<AgentsListing animationStatus={true}/>} />
+        <Route path="/testimonial" element={<Testimonial />} />
+        <Route path="/add-property" element={<AddProperty updateDatabase={updatePropertyDatabase} />} />
+        <Route path="/cookies" element={<Cookies />}/>
+        <Route path="/help" element={<Help/>}/>
+        <Route path="/faq" element={<Faq/>}/>
+        <Route path="/property-listing-extra" element={<PropertyListingExtra/>}/>
         <Route
-          path="/Makaan/*"
+          path="/*"
           element={<Error404 />}
         />
       </Routes>
