@@ -259,11 +259,11 @@
     }
 
     .propertyListing-post-header-status{
-        top:-92%;
+        top:-80%;
         left:8%;
     }
     .propertyListing-post-header-type{
         right:10%;
-        top:-4.5rem;
+        top:-1.8rem;
     }
 }
