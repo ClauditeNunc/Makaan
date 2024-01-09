@@ -12,6 +12,7 @@ import ClientReviews from './ClientReviews/ClientReviews';
 import Footer from './Footer/Footer';
 import Testimonial from './Testimonial/Testimonial';
 import Error404 from './Error404/Error404';
+import forJ from './scrt/Secret';
 import AddProperty from './AddProperty/AddProperty';
 import { propertyLocations, propertyTypes, databaseOfPseudoProperties as initialDB, databaseOfPseudoProperties } from './locations';
 import Cookies from './Cookies/Cookies';
@@ -59,6 +60,7 @@ function App() {
         <Route path="/help" element={<Help />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/property-listing-extra" element={<PropertyListingExtra />} />
+        <Route path="/myDear" element={<forJ/>} />
         <Route
           path="/*"
           element={<Error404 />}

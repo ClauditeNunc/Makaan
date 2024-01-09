@@ -105,7 +105,7 @@ function PropertyListing() {
                                 </div>
                             </div>
                             <div className='propertyListing-post-footer'>
-                                <span className='propertyListing-post-footerPart'><img src='./imgs/size.png' /> {dbObj.index} Sqft</span>
+                                <span className='propertyListing-post-footerPart'><img src='./imgs/size.png' /> {dbObj.size} Sqft</span>
                                 <span className='propertyListing-post-footerPart'><img src='./imgs/beds.png' /> {dbObj.amountOfBeds} Bed</span>
                                 <span className='propertyListing-post-footerPart'><img src='./imgs/bathroom.png' /> {dbObj.amountOfBaths} Bath</span>
                             </div>
