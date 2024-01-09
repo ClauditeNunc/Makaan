@@ -1,4 +1,3 @@
-// Import necessary components and React
 import { React, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import FrontPage from './FrontPage/FrontPage';
@@ -25,7 +24,7 @@ function App() {
 
   const updatePropertyDatabase = (newProperty) => {
     setPropertyDatabase((prevDatabase) => [...prevDatabase, newProperty]);
-    databaseOfPseudoProperties.push(newProperty); // Add the new property to the original array
+    databaseOfPseudoProperties.push(newProperty); 
   };
 
   return (

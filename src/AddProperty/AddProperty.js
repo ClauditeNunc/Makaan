@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; // Import useEffect and useState
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AddProperty.css';
 import { databaseOfPseudoProperties as db, propertyTypes as typesOfProperties, propertyLocations as locationsOfProperties } from '../locations';
@@ -21,7 +21,6 @@ function AddProperty({ updateDatabase }) {
     });
 
     useEffect(() => {
-        // Initialize state with default values and set the proper index
         setNewProperty({
             name: '',
             type: typesOfProperties[0].type,
@@ -42,16 +41,15 @@ function AddProperty({ updateDatabase }) {
         setNewProperty((prevProperty) => ({
             ...prevProperty,
             [name]: value,
-            index: prevProperty.index // Ensure index is not overwritten
+            index: prevProperty.index
         }));
     };
 
     const handleSubmit = () => {
-        // Increment the index before updating the database
         const updatedDB = newProperty;
         updateDatabase(updatedDB);
 
-        console.log(db); // Log the updated array
+        console.log(db);
         navigate('/property-listing-extra');
     };
   return (
