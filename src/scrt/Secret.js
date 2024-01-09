@@ -1,4 +1,4 @@
-function forJ(){
+function ForJ(){
     return(
         <div>
             <div style={{
@@ -16,4 +16,4 @@ function forJ(){
     )
 }
 
-export default forJ
+export default ForJ
