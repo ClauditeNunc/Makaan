@@ -52,7 +52,7 @@ function AddProperty({ updateDatabase }) {
         updateDatabase(updatedDB);
 
         console.log(db); // Log the updated array
-        navigate('/');
+        navigate('/property-listing-extra');
     };
   return (
     <div className='addProperty-wrapper'>
