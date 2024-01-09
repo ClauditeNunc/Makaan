@@ -39,11 +39,20 @@ function Header() {
     const handleMouseLeaveProperties = () => setIsHoveredProperties(false);
     const handleMouseClickProperties = () => setIsHoveredProperties(!isHoveredProperties);
 
-    const handleBurgerClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+    const handleBurgerClick = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+        if (isMobileMenuOpen) {
+            setIsMobileMenuOpen(false);
+        }
+    };
 
     const handleLinkClick = () => {
+        if (isMobileMenuOpen) {
+            setIsMobileMenuOpen(false);
+        }
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+
     return (
         <div className={isMorphed ? 'header-sticky' : 'header'}>
             <div className='header-shortInfo'>
@@ -85,9 +94,9 @@ function Header() {
                 <Link to="/agent-promo" className='header-links-contact'>
                     Contact
                 </Link>
-                    <Link to="/add-property" className='header-links-addProperty-button'> 
+                <Link to="/add-property" className='header-links-addProperty-button'> 
                     Add Property
-                    </Link>
+                </Link>
             </div>
         </div>
     );
