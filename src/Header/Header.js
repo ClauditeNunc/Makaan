@@ -73,7 +73,7 @@ function Header() {
                         onMouseEnter={handleMouseEnterProperties}
                         onMouseLeave={handleMouseLeaveProperties}
                         className={`header-linksDropdownProperty ${isHoveredProperties ? 'visible' : ''}`}>
-                        <Link to="/property-listing">Our Properties</Link>
+                        <Link to="/property-listing" onClick={handleLinkClick}>Our Properties</Link>
                         <Link to="/property-types" onClick={handleLinkClick}>Types of Properties</Link>
                         <Link to="/agents-listing" onClick={handleLinkClick}>Our Agents</Link>
                     </div>
@@ -84,17 +84,17 @@ function Header() {
                         onMouseEnter={handleMouseEnterPages}
                         onMouseLeave={handleMouseLeavePages}
                         className={`header-linksDropdownPage ${isHoveredPages ? 'visible' : ''}`}>
-                        <Link to="/testimonial">Testimonial</Link>
-                        <Link to="/error-404">Error 404</Link>
-                        <Link to="/property-listing-extra">Browse More</Link>
-                        <Link to="/faq">FAQs</Link>
-                        <Link to="/help">Help</Link>
+                        <Link onClick={handleLinkClick} to="/testimonial">Testimonial</Link>
+                        <Link onClick={handleLinkClick} to="/error-404">Error 404</Link>
+                        <Link onClick={handleLinkClick} to="/property-listing-extra">Browse More</Link>
+                        <Link onClick={handleLinkClick} to="/faq">FAQs</Link>
+                        <Link onClick={handleLinkClick} to="/help">Help</Link>
                     </div>
                 </div>
-                <Link to="/agent-promo" className='header-links-contact'>
+                <Link onClick={handleLinkClick} to="/agent-promo" className='header-links-contact'>
                     Contact
                 </Link>
-                <Link to="/add-property" className='header-links-addProperty-button'> 
+                <Link onClick={handleLinkClick} to="/add-property" className='header-links-addProperty-button'> 
                     Add Property
                 </Link>
             </div>
